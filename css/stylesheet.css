@@ -26,13 +26,17 @@ body {
 	font-weight: 500;
 }
 
+.popUp {
+	animation: infoPopup 5s forwards;
+}
+
 @media only screen and (max-width: 350px) {
 	#map {
 		width: 100%;
 		height: 100vh;
 	}
 
-	#info{
+	#info {
 		box-sizing: border-box;
 		height: 100px;
 		width: 100%;
@@ -149,5 +153,12 @@ body {
 		padding: 20px 25px; 
 		width: 100%;
 		height: 50%;
+	}
+}
+
+@keyframes infoPopup {
+	100% {
+		visibility: hidden;
+		height: 0px;
 	}
 }
