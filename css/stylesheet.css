@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap');
+
+* {
+	margin: 0;
+}
+
+body {
+	height: 100vh;
+	overflow: hidden;
+	font-family: Roboto;
+	font-weight: 300;
+	color: white;
+}
+
+.mapboxgl-control-container {
+	visibility: hidden; /*hide the bar under the map(mapbox links)*/
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.box1 {
+	font-weight: 500;
+}
+
+@media only screen and (max-width: 350px) {
+	#map {
+		width: 100%;
+		height: 100vh;
+	}
+
+	#info{
+		box-sizing: border-box;
+		height: 100px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: white;
+		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.80);
+		font-size: 18px;
+	}
+
+	.box1 {
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	.box-con2, .box2 {
+		visibility: hidden;
+	}
+}
+
+@media only screen and (min-width: 351px) and (max-width: 500px) {
+	#map {
+		width: 100%;
+		height: 100vh;
+	}
+
+	#info {
+		box-sizing: border-box;
+		height: 100px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		color: white;
+		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.80);
+		font-size: 18px;
+	}
+
+	.box1 {
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	.box-con2, .box2 {
+		visibility: hidden;
+	}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+	#map {
+		width: 100%;
+		height: 50vh;
+	}
+
+	#info {
+		width: 100%;
+		height: 50vh;
+		color: white;
+		/*background-color: rgba(0, 0, 0, 0.80);*/
+		background-color: rgba(38, 38, 38);
+		align-items: center;
+		justify-content: center;
+		padding-top: 25px;
+	}
+
+	.box-con {
+		box-sizing: border-box;
+		display: flex;
+		height: 45%;
+		width: 90%;
+		margin: auto;
+	}
+
+	.box-con > .box {
+		box-sizing: border-box;
+		padding: 20px 25px; 
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 1001px) {
+	.container {
+		display: flex;
+	}
+
+	#map {
+		height: 100vh;
+		width: 70vw;
+		background-color: lightblue;
+	}
+
+	#info {
+		padding: 5px;
+		width: 30vw;
+		background-color: rgba(38, 38, 38);
+		align-items: center;
+		justify-content: center;
+		padding-top: 25px;
+	}
+
+	.box-con {
+		box-sizing: border-box;
+		height: 50%;
+		width: 90%;
+		margin: auto;
+	}
+
+	.box-con > .box {
+		box-sizing: border-box;
+		padding: 20px 25px; 
+		width: 100%;
+		height: 50%;
+	}
+}
